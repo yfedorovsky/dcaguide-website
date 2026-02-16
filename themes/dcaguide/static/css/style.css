@@ -756,6 +756,118 @@ h4 { font-size: 1rem; font-weight: 600; }
   font-size: 0.75rem;
 }
 
+/* --- Dark Mode --- */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --navy: #F3F4F6;
+    --navy-light: #D1D5DB;
+    --gray-100: #1a1a2e;
+    --gray-200: #1f1f35;
+    --gray-300: #2d2d44;
+    --gray-400: #9CA3AF;
+    --gray-500: #A1A1AA;
+    --white: #111827;
+    --shadow-sm: 0 1px 2px rgba(0,0,0,0.2);
+    --shadow-md: 0 4px 12px rgba(0,0,0,0.3);
+  }
+
+  body {
+    -webkit-font-smoothing: auto;
+  }
+
+  /* Header logo — invert navy text to white for dark bg */
+  .logo-img {
+    filter: brightness(0) invert(1);
+  }
+
+  /* Hero signup card — deeper shadow on dark surfaces */
+  .hero-signup {
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
+  }
+
+  /* Email inputs — dark background with light text */
+  .signup-form input[type="email"] {
+    background: var(--gray-200);
+    color: var(--navy);
+  }
+
+  .signup-form input[type="email"]::placeholder {
+    color: var(--gray-500);
+  }
+
+  /* Post card hover — stronger shadow */
+  .post-card:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+  }
+
+  /* Inline code — slightly more contrast */
+  .post-content code {
+    background: var(--gray-300);
+  }
+
+  /* CTA banner — keep dark background (don't inherit flipped --navy) */
+  .cta-banner {
+    background: #1F2937;
+  }
+
+  .cta-banner h2 {
+    color: #FFFFFF;
+  }
+
+  .cta-banner p {
+    color: #9CA3AF;
+  }
+
+  /* Footer — keep dark background */
+  .site-footer {
+    background: #1F2937;
+    color: #9CA3AF;
+  }
+
+  .footer-logo-img {
+    filter: brightness(0) invert(1);
+  }
+
+  .footer-nav h4 {
+    color: #FFFFFF;
+  }
+
+  .footer-nav a {
+    color: #9CA3AF;
+  }
+
+  .footer-nav a:hover {
+    color: #FFFFFF;
+  }
+
+  .footer-signup h4 {
+    color: #FFFFFF;
+  }
+
+  .footer-signup p {
+    color: #9CA3AF;
+  }
+
+  .footer-signup-form input[type="email"] {
+    background: #374151;
+    border-color: #374151;
+    color: #FFFFFF;
+  }
+
+  .footer-signup-form input[type="email"]::placeholder {
+    color: #9CA3AF;
+  }
+
+  .footer-bottom {
+    border-top-color: #374151;
+  }
+
+  /* Share buttons — slight transparency */
+  .share-link {
+    opacity: 0.9;
+  }
+}
+
 /* --- Responsive --- */
 @media (max-width: 768px) {
   h1 { font-size: 2rem; }
