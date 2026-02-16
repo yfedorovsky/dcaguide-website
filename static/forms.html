@@ -1,0 +1,17 @@
+<!-- Hidden page for Netlify form detection. Netlify's deploy bot parses
+     this file to register form names. The actual forms on the site POST
+     with a matching "form-name" hidden input. -->
+<!DOCTYPE html>
+<html>
+<head><title>Forms</title></head>
+<body>
+  <form name="newsletter" netlify netlify-honeypot="bot-field" hidden>
+    <input name="bot-field">
+    <input name="email" type="email">
+  </form>
+  <form name="newsletter-footer" netlify netlify-honeypot="bot-field" hidden>
+    <input name="bot-field">
+    <input name="email" type="email">
+  </form>
+</body>
+</html>
