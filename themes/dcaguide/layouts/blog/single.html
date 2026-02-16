@@ -1,0 +1,53 @@
+{{ define "main" }}
+<article class="post-single">
+  <header class="post-header">
+    <h1>{{ .Title }}</h1>
+    <div class="post-meta">
+      {{ with .Params.categories }}
+        {{ range . }}
+          <span class="tag">{{ . }}</span>
+        {{ end }}
+      {{ end }}
+      <span>{{ .Date.Format "January 2, 2006" }}</span>
+      <span class="separator">&middot;</span>
+      <span>{{ math.Round (div (countwords .Content) 200.0) }} min read</span>
+    </div>
+  </header>
+
+  <div class="post-content">
+    {{ .Content }}
+  </div>
+
+  {{/* Share Buttons */}}
+  <div class="share-buttons">
+    <h4>Share this article</h4>
+    <div class="share-links">
+      <a class="share-link twitter"
+         href="https://twitter.com/intent/tweet?text={{ .Title | urlquery }}&url={{ .Permalink | urlquery }}"
+         target="_blank" rel="noopener noreferrer">
+        Twitter
+      </a>
+      <a class="share-link linkedin"
+         href="https://www.linkedin.com/shareArticle?mini=true&url={{ .Permalink | urlquery }}&title={{ .Title | urlquery }}"
+         target="_blank" rel="noopener noreferrer">
+        LinkedIn
+      </a>
+      <a class="share-link email-share"
+         href="mailto:?subject={{ .Title | urlquery }}&body=Check out this article: {{ .Permalink | urlquery }}">
+        Email
+      </a>
+    </div>
+  </div>
+</article>
+
+{{/* CTA at bottom of post */}}
+<section class="cta-banner">
+  <div class="cta-banner-inner">
+    <h2>Start Your Bitcoin DCA Today</h2>
+    <p>Set up automatic recurring purchases on River — the easiest way to stack sats.</p>
+    {{ with .Site.Params.affiliateURL }}
+      <a href="{{ . }}" target="_blank" rel="noopener noreferrer" class="btn btn-orange">Get Started on River &rarr;</a>
+    {{ end }}
+  </div>
+</section>
+{{ end }}

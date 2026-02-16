@@ -1,0 +1,72 @@
+baseURL = "https://dcaguide.io/"
+languageCode = "en-us"
+title = "DCA Guide"
+theme = "dcaguide"
+
+# Content settings
+summaryLength = 30
+[pagination]
+  pagerSize = 10
+enableRobotsTXT = true
+
+# RSS
+[outputs]
+  home = ["HTML", "RSS"]
+  section = ["HTML", "RSS"]
+
+[outputFormats.RSS]
+  mediatype = "application/rss+xml"
+  baseName = "index"
+
+# Site params
+[params]
+  description = "Learn dollar-cost averaging strategy for Bitcoin beginners. Build wealth steadily, without timing the market."
+  author = "DCA Guide"
+  affiliateURL = "https://river.com/signup?r=dcaguide"
+  ogImage = "images/og-default.png"
+
+# Main navigation
+[[menus.main]]
+  name = "Blog"
+  url = "/blog/"
+  weight = 1
+
+[[menus.main]]
+  name = "About"
+  url = "/about/"
+  weight = 2
+
+# Footer navigation
+[[menus.footer]]
+  name = "Home"
+  url = "/"
+  weight = 1
+
+[[menus.footer]]
+  name = "Blog"
+  url = "/blog/"
+  weight = 2
+
+[[menus.footer]]
+  name = "About"
+  url = "/about/"
+  weight = 3
+
+# Markup settings
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = false
+  [markup.highlight]
+    noClasses = true
+    style = "github"
+    lineNos = false
+
+# Minification
+[minify]
+  disableCSS = false
+  disableHTML = false
+  disableJS = false
+  disableJSON = false
+  disableSVG = false
+  disableXML = false

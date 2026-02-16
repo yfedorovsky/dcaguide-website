@@ -1,0 +1,47 @@
+<footer class="site-footer">
+  <div class="footer-container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="{{ "/" | relURL }}" class="logo-text">{{ .Site.Title }}</a>
+        <p>{{ .Site.Params.description }}</p>
+      </div>
+      <div class="footer-nav">
+        <h4>Navigate</h4>
+        <ul>
+          {{ range .Site.Menus.footer }}
+            <li><a href="{{ .URL }}">{{ .Name }}</a></li>
+          {{ end }}
+        </ul>
+      </div>
+      <div class="footer-nav">
+        <h4>Resources</h4>
+        <ul>
+          <li><a href="{{ "blog/" | relURL }}">Blog</a></li>
+          <li><a href="{{ "/index.xml" | relURL }}">RSS Feed</a></li>
+          {{ with .Site.Params.affiliateURL }}
+            <li><a href="{{ . }}" target="_blank" rel="noopener noreferrer">Start DCA on River</a></li>
+          {{ end }}
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; {{ now.Year }} {{ .Site.Title }}. All rights reserved.</p>
+      <p class="disclaimer">This site contains affiliate links. We may earn a commission at no extra cost to you. This is not financial advice.</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+// Mobile menu toggle
+(function() {
+  const toggle = document.querySelector('.menu-toggle');
+  const nav = document.querySelector('.nav-links');
+  if (toggle && nav) {
+    toggle.addEventListener('click', function() {
+      const expanded = this.getAttribute('aria-expanded') === 'true';
+      this.setAttribute('aria-expanded', !expanded);
+      nav.classList.toggle('open');
+    });
+  }
+})();
+</script>

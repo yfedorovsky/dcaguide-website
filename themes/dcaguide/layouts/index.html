@@ -1,0 +1,56 @@
+{{ define "main" }}
+
+{{/* --- Hero --- */}}
+<section class="hero">
+  <div class="hero-inner">
+    <h1>Bitcoin DCA <span class="highlight">Made Simple</span></h1>
+    <p class="tagline">Learn dollar-cost averaging strategy for Bitcoin beginners. Build wealth steadily, without timing the market.</p>
+    <div class="hero-cta">
+      <a href="{{ "blog/" | relURL }}" class="btn btn-orange">Read the Guide</a>
+      {{ with .Site.Params.affiliateURL }}
+        <a href="{{ . }}" target="_blank" rel="noopener noreferrer" class="btn btn-outline">Start DCA on River &rarr;</a>
+      {{ end }}
+    </div>
+  </div>
+</section>
+
+{{/* --- Email Signup --- */}}
+<section class="signup-section">
+  <div class="signup-box">
+    <h2>Get the Free DCA Starter Guide</h2>
+    <p>Join our newsletter and learn how to start dollar-cost averaging into Bitcoin — one email at a time.</p>
+    <form class="signup-form" name="newsletter" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+      <input type="hidden" name="form-name" value="newsletter">
+      <p class="hidden" style="display:none"><label>Don't fill this out: <input name="bot-field"></label></p>
+      <input type="email" name="email" placeholder="you@example.com" required aria-label="Email address">
+      <button type="submit" class="btn btn-orange">Subscribe</button>
+    </form>
+    <p class="signup-privacy">No spam, ever. Unsubscribe anytime.</p>
+  </div>
+</section>
+
+{{/* --- Latest Posts --- */}}
+<section class="latest-posts">
+  <div class="section-header">
+    <h2>Latest Articles</h2>
+    <a href="{{ "blog/" | relURL }}">View all &rarr;</a>
+  </div>
+  <div class="posts-grid">
+    {{ range first 3 (where .Site.RegularPages "Section" "blog") }}
+      {{ partial "post-card.html" . }}
+    {{ end }}
+  </div>
+</section>
+
+{{/* --- CTA Banner --- */}}
+<section class="cta-banner">
+  <div class="cta-banner-inner">
+    <h2>Ready to Start Your DCA Journey?</h2>
+    <p>River makes it easy to set up automatic, recurring Bitcoin purchases. Start with as little as $10.</p>
+    {{ with .Site.Params.affiliateURL }}
+      <a href="{{ . }}" target="_blank" rel="noopener noreferrer" class="btn btn-orange">Open a River Account &rarr;</a>
+    {{ end }}
+  </div>
+</section>
+
+{{ end }}

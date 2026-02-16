@@ -1,0 +1,14 @@
+<article class="post-card">
+  <div class="post-card-meta">
+    {{ with .Params.categories }}
+      {{ range first 1 . }}
+        <span class="tag">{{ . }}</span>
+      {{ end }}
+    {{ end }}
+    <span>{{ .Date.Format "Jan 2, 2006" }}</span>
+    <span>&middot;</span>
+    <span>{{ math.Round (div (countwords .Content) 200.0) }} min read</span>
+  </div>
+  <h3><a href="{{ .Permalink }}">{{ .Title }}</a></h3>
+  <p>{{ .Summary | truncate 140 }}</p>
+</article>

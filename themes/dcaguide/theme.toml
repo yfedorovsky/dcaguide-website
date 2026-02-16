@@ -1,0 +1,9 @@
+name = "DCA Guide"
+license = "MIT"
+licenselink = "https://github.com/yourname/dcaguide"
+description = "Custom minimal theme for dcaguide.io"
+homepage = "https://dcaguide.io"
+min_version = "0.112.0"
+
+[author]
+  name = "DCA Guide"

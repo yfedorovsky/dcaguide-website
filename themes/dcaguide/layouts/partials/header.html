@@ -1,0 +1,25 @@
+<header class="site-header">
+  <nav class="nav-container">
+    <a href="{{ "/" | relURL }}" class="logo" aria-label="{{ .Site.Title }} home">
+      {{/* Placeholder logo — replace static/images/logo.png (300x100px) */}}
+      {{ if (fileExists "static/images/logo.png") }}
+        <img src="{{ "images/logo.png" | relURL }}" alt="{{ .Site.Title }}" width="300" height="100" class="logo-img">
+      {{ else }}
+        <span class="logo-text">{{ .Site.Title }}</span>
+      {{ end }}
+    </a>
+
+    <button class="menu-toggle" aria-label="Toggle menu" aria-expanded="false">
+      <span class="hamburger"></span>
+    </button>
+
+    <ul class="nav-links">
+      {{ range .Site.Menus.main }}
+        <li><a href="{{ .URL }}" {{ if $.IsMenuCurrent "main" . }}class="active"{{ end }}>{{ .Name }}</a></li>
+      {{ end }}
+      {{ with .Site.Params.affiliateURL }}
+        <li><a href="{{ . }}" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-orange">Start DCA &rarr;</a></li>
+      {{ end }}
+    </ul>
+  </nav>
+</header>
