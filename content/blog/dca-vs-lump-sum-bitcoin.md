@@ -62,7 +62,7 @@ DCA means splitting your investment into equal parts over time. You take that sa
 
 **Potentially lower returns**: If Bitcoin only goes up, you miss gains on money sitting in cash.
 
-**More transactions**: More fees (though minimal with platforms like River).
+**More transactions**: More fees (though minimal with platforms like [River](https://river.com/invite?r=XRANN5QE)).
 
 **Delayed entry**: Some of your capital isn't working for months.
 
@@ -164,21 +164,4 @@ For most beginners: **DCA wins** because it's sustainable, stress-free, and keep
 
 Remember: consistency beats perfection.
 
-*Disclaimer: This is educational content, not financial advice. Do your own research.*
-```
-
----
-
-## 🎯 **STEP 2: Add These Posts to Hugo**
-
-**In Claude Code**, tell it:
-```
-Replace the sample blog posts with these 3 real posts:
-
-1. what-is-bitcoin-dca.md
-2. how-to-start-bitcoin-dca-2026.md  
-3. dca-vs-lump-sum-bitcoin.md
-
-[Paste the markdown content for each]
-
-Make sure they show up on the homepage.
+*Disclaimer: This is educational content, not financial advice. Do your own research. Some links on this page are affiliate links — we may earn a commission if you sign up through our link, at no extra cost to you.*

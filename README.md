@@ -65,7 +65,7 @@ Edit the `affiliateURL` in `hugo.toml`:
 
 ```toml
 [params]
-  affiliateURL = "https://river.com/signup?r=YOUR_CODE"
+  affiliateURL = "https://river.com/invite?r=XRANN5QE"
 ```
 
 ### Colors

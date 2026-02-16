@@ -31,9 +31,9 @@ Most beginners choose weekly or bi-weekly to maximize the DCA effect.
 
 Not all platforms support automatic recurring purchases. Here are the best options for DCA in 2026:
 
-**River** (Recommended for DCA)
+[**River**](https://river.com/invite?r=XRANN5QE) (Recommended for DCA)
 - Clean interface for beginners
-- Low fees on recurring purchases  
+- Low fees on recurring purchases
 - Strong security and insurance
 - Automatic DCA built-in
 - U.S. based and regulated
@@ -55,7 +55,7 @@ Not all platforms support automatic recurring purchases. Here are the best optio
 
 Using River as an example:
 
-1. Go to River.com
+1. Go to [River.com](https://river.com/invite?r=XRANN5QE)
 2. Sign up with email
 3. Verify identity (required for U.S. customers)
 4. Connect bank account
@@ -116,7 +116,7 @@ The beauty of DCA is automation. Once it's set up:
 ## Your First Month Checklist
 
 - [ ] Decide investment amount and frequency
-- [ ] Choose platform (River recommended)
+- [ ] Choose platform ([River](https://river.com/invite?r=XRANN5QE) recommended)
 - [ ] Create account and verify identity
 - [ ] Connect bank account
 - [ ] Enable 2FA security
@@ -140,4 +140,4 @@ Bitcoin DCA isn't glamorous, but it's proven. Set it up once, stay consistent, a
 
 The best time to start was yesterday. The second best time is today.
 
-*Disclaimer: This is educational content, not financial advice. Only invest what you can afford to lose.*
+*Disclaimer: This is educational content, not financial advice. Only invest what you can afford to lose. Some links on this page are affiliate links — we may earn a commission if you sign up through our link, at no extra cost to you.*

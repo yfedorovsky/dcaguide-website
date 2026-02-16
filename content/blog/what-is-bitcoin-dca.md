@@ -35,7 +35,7 @@ After one month, you've invested $400 and accumulated Bitcoin at an average pric
 
 The easiest way to implement DCA is through platforms that support automatic recurring purchases:
 
-1. **Choose a platform** like [River](https://river.com) that offers auto-buy features
+1. **Choose a platform** like [River](https://river.com/invite?r=XRANN5QE) that offers auto-buy features
 2. **Set your amount**: Decide how much you can invest weekly or monthly
 3. **Enable auto-buy**: Schedule automatic purchases
 4. **Stay consistent**: Let it run without trying to "optimize" timing
@@ -64,4 +64,4 @@ The key is consistency, not the amount.
 
 Dollar-cost averaging is the boring, proven way to build Bitcoin wealth without gambling on market timing. Start with an amount you're comfortable with, set up automatic purchases, and let time do the work.
 
-*Disclaimer: This is educational content, not financial advice. Do your own research and only invest what you can afford to lose.*
+*Disclaimer: This is educational content, not financial advice. Do your own research and only invest what you can afford to lose. Some links on this page are affiliate links — we may earn a commission if you sign up through our link, at no extra cost to you.*
