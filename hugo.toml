@@ -70,3 +70,6 @@ enableRobotsTXT = true
   disableJSON = false
   disableSVG = false
   disableXML = false
+  [minify.tdewolff]
+    [minify.tdewolff.html]
+      keepQuotes = true
