@@ -237,29 +237,28 @@ h4 { font-size: 1rem; font-weight: 600; }
   flex-wrap: wrap;
 }
 
-/* --- Email Signup --- */
-.signup-section {
-  padding: 4rem 1.5rem;
+/* --- Hero Email Signup (Above the Fold) --- */
+.hero-signup {
+  margin-top: 2.5rem;
   background: var(--white);
-}
-
-.signup-box {
-  max-width: 560px;
-  margin: 0 auto;
-  text-align: center;
-  background: var(--gray-100);
-  padding: 3rem 2rem;
+  padding: 2rem 2.5rem;
   border-radius: 12px;
-  border: 1px solid var(--gray-300);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+  max-width: 520px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-.signup-box h2 {
-  margin-bottom: 0.5rem;
+.hero-signup-headline {
+  font-size: 1.35rem;
+  margin-bottom: 0.35rem;
+  color: var(--navy);
 }
 
-.signup-box p {
+.hero-signup-subtext {
   color: var(--gray-500);
-  margin-bottom: 1.5rem;
+  font-size: 0.95rem;
+  margin-bottom: 1.25rem;
 }
 
 .signup-form {
@@ -271,27 +270,133 @@ h4 { font-size: 1rem; font-weight: 600; }
 
 .signup-form input[type="email"] {
   flex: 1;
-  padding: 0.75rem 1rem;
-  border: 1px solid var(--gray-300);
+  padding: 0.85rem 1rem;
+  border: 2px solid var(--gray-300);
   border-radius: var(--radius);
   font-size: 1rem;
   font-family: inherit;
   outline: none;
-  transition: border-color var(--transition);
+  transition: border-color var(--transition), box-shadow var(--transition);
 }
 
 .signup-form input[type="email"]:focus {
   border-color: var(--orange);
+  box-shadow: 0 0 0 3px rgba(247, 147, 26, 0.15);
 }
 
 .signup-form button {
   white-space: nowrap;
+  font-size: 1rem;
+  padding: 0.85rem 1.5rem;
+}
+
+.hero-form {
+  max-width: 100%;
 }
 
 .signup-privacy {
   font-size: 0.8rem;
   color: var(--gray-400);
   margin-top: 0.75rem;
+}
+
+/* --- Footer Email Signup --- */
+.footer-signup {
+  min-width: 0;
+}
+
+.footer-signup h4 {
+  color: var(--white);
+  margin-bottom: 0.5rem;
+  font-size: 0.875rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.footer-signup p {
+  font-size: 0.875rem;
+  color: var(--gray-400);
+  margin-bottom: 0.75rem;
+  line-height: 1.5;
+}
+
+.footer-signup-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.footer-signup-form input[type="email"] {
+  width: 100%;
+  padding: 0.6rem 0.75rem;
+  border: 1px solid var(--navy-light);
+  border-radius: var(--radius);
+  font-size: 0.875rem;
+  font-family: inherit;
+  background: var(--navy-light);
+  color: var(--white);
+  outline: none;
+  transition: border-color var(--transition);
+}
+
+.footer-signup-form input[type="email"]::placeholder {
+  color: var(--gray-400);
+}
+
+.footer-signup-form input[type="email"]:focus {
+  border-color: var(--orange);
+}
+
+.footer-signup-form button {
+  width: 100%;
+}
+
+/* --- Thank You Page --- */
+.thank-you {
+  padding: 5rem 1.5rem;
+  text-align: center;
+  min-height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.thank-you-inner {
+  max-width: 520px;
+  margin: 0 auto;
+}
+
+.thank-you-icon {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  background: var(--orange);
+  color: var(--white);
+  font-size: 2rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1.5rem;
+}
+
+.thank-you h1 {
+  font-size: 2.25rem;
+  margin-bottom: 0.75rem;
+}
+
+.thank-you-message {
+  font-size: 1.125rem;
+  color: var(--gray-500);
+  line-height: 1.7;
+  margin-bottom: 2.5rem;
+}
+
+.thank-you-cta {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
 /* --- Latest Posts Section --- */
@@ -600,8 +705,8 @@ h4 { font-size: 1rem; font-weight: 600; }
 
 .footer-grid {
   display: grid;
-  grid-template-columns: 2fr 1fr 1fr;
-  gap: 3rem;
+  grid-template-columns: 2fr 1fr 1fr 1.5fr;
+  gap: 2.5rem;
   margin-bottom: 2.5rem;
 }
 
@@ -689,6 +794,14 @@ h4 { font-size: 1rem; font-weight: 600; }
     flex-direction: column;
   }
 
+  .hero-signup {
+    padding: 1.5rem 1.25rem;
+  }
+
+  .hero-signup-headline {
+    font-size: 1.15rem;
+  }
+
   .posts-grid {
     grid-template-columns: 1fr;
   }
@@ -710,5 +823,16 @@ h4 { font-size: 1rem; font-weight: 600; }
 @media (max-width: 480px) {
   .hero h1 { font-size: 1.75rem; }
   .hero .tagline { font-size: 1.05rem; }
-  .signup-box { padding: 2rem 1.25rem; }
+
+  .hero-signup {
+    padding: 1.25rem 1rem;
+  }
+
+  .thank-you {
+    padding: 3rem 1.5rem;
+  }
+
+  .thank-you h1 {
+    font-size: 1.75rem;
+  }
 }

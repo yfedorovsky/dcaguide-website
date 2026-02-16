@@ -23,6 +23,16 @@
           {{ end }}
         </ul>
       </div>
+      <div class="footer-signup">
+        <h4>Weekly DCA Tips</h4>
+        <p>Get Bitcoin investing tips in your inbox.</p>
+        <form class="footer-signup-form" name="newsletter-footer" method="POST" action="{{ "thank-you/" | relURL }}" data-netlify="true" netlify-honeypot="bot-field">
+          <input type="hidden" name="form-name" value="newsletter-footer">
+          <p class="hidden" style="display:none"><label>Don't fill this out: <input name="bot-field"></label></p>
+          <input type="email" name="email" placeholder="you@example.com" required aria-label="Email address">
+          <button type="submit" class="btn btn-orange btn-sm">Subscribe</button>
+        </form>
+      </div>
     </div>
     <div class="footer-bottom">
       <p>&copy; {{ now.Year }} {{ .Site.Title }}. All rights reserved.</p>

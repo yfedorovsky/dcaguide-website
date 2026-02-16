@@ -1,31 +1,21 @@
 {{ define "main" }}
 
-{{/* --- Hero --- */}}
+{{/* --- Hero with Email Capture --- */}}
 <section class="hero">
   <div class="hero-inner">
     <h1>Bitcoin DCA <span class="highlight">Made Simple</span></h1>
     <p class="tagline">Learn dollar-cost averaging strategy for Bitcoin beginners. Build wealth steadily, without timing the market.</p>
-    <div class="hero-cta">
-      <a href="{{ "blog/" | relURL }}" class="btn btn-orange">Read the Guide</a>
-      {{ with .Site.Params.affiliateURL }}
-        <a href="{{ . }}" target="_blank" rel="noopener noreferrer" class="btn btn-outline">Start DCA on River &rarr;</a>
-      {{ end }}
+    <div class="hero-signup">
+      <h2 class="hero-signup-headline">Get Bitcoin DCA tips delivered weekly</h2>
+      <p class="hero-signup-subtext">Join 100+ beginners learning to invest smarter</p>
+      <form class="signup-form hero-form" name="newsletter" method="POST" action="{{ "thank-you/" | relURL }}" data-netlify="true" netlify-honeypot="bot-field">
+        <input type="hidden" name="form-name" value="newsletter">
+        <p class="hidden" style="display:none"><label>Don't fill this out: <input name="bot-field"></label></p>
+        <input type="email" name="email" placeholder="you@example.com" required aria-label="Email address">
+        <button type="submit" class="btn btn-orange">Get Weekly Tips</button>
+      </form>
+      <p class="signup-privacy">Free forever. No spam. Unsubscribe anytime.</p>
     </div>
-  </div>
-</section>
-
-{{/* --- Email Signup --- */}}
-<section class="signup-section">
-  <div class="signup-box">
-    <h2>Get the Free DCA Starter Guide</h2>
-    <p>Join our newsletter and learn how to start dollar-cost averaging into Bitcoin — one email at a time.</p>
-    <form class="signup-form" name="newsletter" method="POST" data-netlify="true" netlify-honeypot="bot-field">
-      <input type="hidden" name="form-name" value="newsletter">
-      <p class="hidden" style="display:none"><label>Don't fill this out: <input name="bot-field"></label></p>
-      <input type="email" name="email" placeholder="you@example.com" required aria-label="Email address">
-      <button type="submit" class="btn btn-orange">Subscribe</button>
-    </form>
-    <p class="signup-privacy">No spam, ever. Unsubscribe anytime.</p>
   </div>
 </section>
 
