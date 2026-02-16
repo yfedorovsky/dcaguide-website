@@ -133,21 +133,13 @@ h4 { font-size: 1rem; font-weight: 600; }
 .logo {
   display: flex;
   align-items: center;
+  flex-shrink: 0;
 }
 
 .logo-img {
-  max-height: 40px;
+  height: 44px;
   width: auto;
-}
-
-.logo-text {
-  font-size: 1.25rem;
-  font-weight: 700;
-  color: var(--navy);
-}
-
-.logo-text:hover {
-  color: var(--navy);
+  display: block;
 }
 
 .nav-links {
@@ -710,11 +702,17 @@ h4 { font-size: 1rem; font-weight: 600; }
   margin-bottom: 2.5rem;
 }
 
-.footer-brand .logo-text {
-  color: var(--white);
-  font-size: 1.125rem;
+.footer-logo-link {
   display: inline-block;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.footer-logo-img {
+  height: 36px;
+  width: auto;
+  display: block;
+  /* Invert to white for dark footer background */
+  filter: brightness(0) invert(1);
 }
 
 .footer-brand p {
@@ -762,6 +760,14 @@ h4 { font-size: 1rem; font-weight: 600; }
 @media (max-width: 768px) {
   h1 { font-size: 2rem; }
   .hero h1 { font-size: 2.25rem; }
+
+  .logo-img {
+    height: 36px;
+  }
+
+  .footer-logo-img {
+    height: 30px;
+  }
 
   /* Mobile nav */
   .menu-toggle {
@@ -823,6 +829,10 @@ h4 { font-size: 1rem; font-weight: 600; }
 @media (max-width: 480px) {
   .hero h1 { font-size: 1.75rem; }
   .hero .tagline { font-size: 1.05rem; }
+
+  .logo-img {
+    height: 30px;
+  }
 
   .hero-signup {
     padding: 1.25rem 1rem;

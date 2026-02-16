@@ -34,8 +34,13 @@
   {{/* Styles */}}
   <link rel="stylesheet" href="{{ "css/style.css" | relURL }}">
 
-  {{/* Favicon placeholder */}}
-  <link rel="icon" href="{{ "images/favicon.ico" | relURL }}" type="image/x-icon">
+  {{/* Favicons */}}
+  <link rel="icon" type="image/x-icon" href="{{ "images/favicon.ico" | relURL }}">
+  <link rel="icon" type="image/png" sizes="16x16" href="{{ "images/favicon-16x16.png" | relURL }}">
+  <link rel="icon" type="image/png" sizes="32x32" href="{{ "images/favicon-32x32.png" | relURL }}">
+  <link rel="apple-touch-icon" sizes="180x180" href="{{ "images/apple-touch-icon.png" | relURL }}">
+  <link rel="manifest" href="{{ "site.webmanifest" | relURL }}">
+  <meta name="theme-color" content="#F7931A">
 </head>
 <body>
   {{ partial "header.html" . }}

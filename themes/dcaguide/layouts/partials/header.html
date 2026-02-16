@@ -1,12 +1,11 @@
 <header class="site-header">
   <nav class="nav-container">
-    <a href="{{ "/" | relURL }}" class="logo" aria-label="{{ .Site.Title }} home">
-      {{/* Placeholder logo — replace static/images/logo.png (300x100px) */}}
-      {{ if (fileExists "static/images/logo.png") }}
-        <img src="{{ "images/logo.png" | relURL }}" alt="{{ .Site.Title }}" width="300" height="100" class="logo-img">
-      {{ else }}
-        <span class="logo-text">{{ .Site.Title }}</span>
-      {{ end }}
+    <a href="{{ "/" | relURL }}" class="logo" aria-label="{{ .Site.Title }} - Bitcoin DCA Made Simple">
+      <img src="{{ "images/logo-header.png" | relURL }}"
+           srcset="{{ "images/logo-header.png" | relURL }} 1x, {{ "images/logo-header-2x.png" | relURL }} 2x"
+           alt="{{ .Site.Title }} - Bitcoin DCA Made Simple"
+           width="400" height="134"
+           class="logo-img">
     </a>
 
     <button class="menu-toggle" aria-label="Toggle menu" aria-expanded="false">
