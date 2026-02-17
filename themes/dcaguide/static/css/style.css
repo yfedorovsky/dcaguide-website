@@ -708,10 +708,10 @@ h4 { font-size: 1rem; font-weight: 600; }
 }
 
 .footer-logo-img {
-  height: 36px;
+  height: 40px;
   width: auto;
   display: block;
-  /* Invert to white for dark footer background */
+  /* Make logo white for dark footer background */
   filter: brightness(0) invert(1);
 }
 
@@ -878,7 +878,7 @@ h4 { font-size: 1rem; font-weight: 600; }
   }
 
   .footer-logo-img {
-    height: 30px;
+    height: 34px;
   }
 
   /* Mobile nav */
